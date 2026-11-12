@@ -1,0 +1,59 @@
+﻿PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage erase
+PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage run --branch --source=blood_donation_screening -m pytest BranchCoverageTest_blood_donation_screening.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6
+collecting ... collected 43 items
+
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_cohorts_not_a_list_short_circuits_true[None] PASSED [  2%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_cohorts_not_a_list_short_circuits_true[not_a_list] PASSED [  4%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_cohorts_not_a_list_short_circuits_true[invalid_cohorts2] PASSED [  6%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_cohorts_not_a_list_short_circuits_true[invalid_cohorts3] PASSED [  9%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_cohorts_not_a_list_short_circuits_true[42] PASSED [ 11%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_volume_non_positive_evaluates_true[0] PASSED [ 13%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_volume_non_positive_evaluates_true[-1] PASSED [ 16%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_volume_non_positive_evaluates_true[-500] PASSED [ 18%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_guard_valid_inputs_proceeds PASSED [ 20%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_cohort_loop_zero_iterations PASSED [ 23%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_cohort_loop_multiple_iterations_accumulates_volume PASSED [ 25%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_clinic_not_registered_skips_cohort[unregistered_cohort0] PASSED [ 27%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_clinic_not_registered_skips_cohort[unregistered_cohort1] PASSED [ 30%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_clinic_not_registered_skips_cohort[unregistered_cohort2] PASSED [ 32%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_clinic_registered_true_proceeds_to_donors PASSED [ 34%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_empty_donors_list_skips_inner_loop PASSED [ 37%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_missing_donors_key_defaults_to_empty PASSED [ 39%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_age_below_threshold_defers_donor PASSED [ 41%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_weight_below_threshold_defers_donor PASSED [ 44%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_age_and_weight_at_exact_lower_boundaries_accepted PASSED [ 46%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_low_hb_standard_cohort_defers_without_break PASSED [ 48%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_low_hb_high_altitude_resets_volume_and_breaks_inner_loop PASSED [ 51%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_exact_hb_lower_boundary_accepted PASSED [ 53%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_high_hb_above_boundary_defers_donor PASSED [ 55%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_exact_hb_upper_boundary_accepted PASSED [ 58%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_fast_track_true_adds_bonus PASSED [ 60%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_fast_track_false_does_not_add_bonus PASSED [ 62%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_fast_track_bonus_after_high_altitude_break PASSED [ 65%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_deferred_count_exactly_four_and_zero_volume_is_zero_yield PASSED [ 67%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_deferred_count_exactly_five_is_high_deferral_even_with_zero_yield PASSED [ 69%]
+BranchCoverageTest_blood_donation_screening.py::TestProcessDonorCohortBranchCoverage::test_deferred_count_five_with_positive_volume_is_high_deferral PASSED [ 72%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_empty_or_falsy_centrifuge_input_returns_no_data[empty_input0] PASSED [ 74%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_empty_or_falsy_centrifuge_input_returns_no_data[None] PASSED [ 76%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_empty_or_falsy_centrifuge_input_returns_no_data[empty_input2] PASSED [ 79%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_non_empty_runs_proceeds_to_outer_loop PASSED [ 81%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_empty_inner_run_does_not_abort PASSED [ 83%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_rpm_exactly_at_threshold_is_not_a_drop PASSED [ 86%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_rpm_above_threshold_resets_streak PASSED [ 88%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_single_low_rpm_in_each_of_multiple_runs_resets_per_run PASSED [ 90%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_exactly_two_consecutive_drops_aborts_spin PASSED [ 93%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_three_consecutive_drops_aborts_immediately_on_second PASSED [ 95%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_abort_occurs_in_subsequent_run PASSED [ 97%]
+BranchCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeBranchCoverage::test_all_stable_multiple_runs PASSED [100%]
+
+============================= 43 passed in 0.12s ==============================
+PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage report -m
+Name                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------
+blood_donation_screening.py      45      0     32      0   100%
+-------------------------------------------------------------------------
+TOTAL                            45      0     32      0   100%

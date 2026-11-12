@@ -1,0 +1,32 @@
+﻿PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage erase
+PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage run --source=blood_donation_screening -m pytest CodeCoverageTest_blood_donation_screening.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6
+collecting ... collected 16 items
+
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_invalid_cohort_container_type_raises_value_error PASSED [  6%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_non_positive_volume_raises_value_error PASSED [ 12%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_empty_cohort_list_returns_zero_yield PASSED [ 18%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_unregistered_clinic_cohort_is_skipped PASSED [ 25%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_single_accepted_donor_standard_cohort PASSED [ 31%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_underage_donor_is_deferred PASSED [ 37%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_underweight_donor_is_deferred PASSED [ 43%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_low_hemoglobin_standard_cohort_deferred PASSED [ 50%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_high_altitude_low_hemoglobin_resets_volume_and_breaks PASSED [ 56%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_high_hemoglobin_donor_is_deferred PASSED [ 62%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_fast_track_adds_bonus_volume PASSED [ 68%]
+CodeCoverageTest_blood_donation_screening.py::TestProcessDonorCohortCodeCoverage::test_high_deferral_status_when_deferrals_exceed_four PASSED [ 75%]
+CodeCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeCodeCoverage::test_empty_or_none_centrifuge_runs_returns_no_data PASSED [ 81%]
+CodeCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeCodeCoverage::test_centrifuge_stable_spin PASSED [ 87%]
+CodeCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeCodeCoverage::test_centrifuge_abort_on_consecutive_drops PASSED [ 93%]
+CodeCoverageTest_blood_donation_screening.py::TestVerifyStorageCentrifugeCodeCoverage::test_centrifuge_streak_resets_on_recovery PASSED [100%]
+
+============================= 16 passed in 0.09s ==============================
+PS C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6> coverage report -m
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+blood_donation_screening.py      45      0   100%
+-----------------------------------------------------------
+TOTAL                            45      0   100%

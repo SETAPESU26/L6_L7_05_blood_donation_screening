@@ -1,0 +1,35 @@
+﻿=======================================================
+BASELINE STATEMENT COVERAGE (Starter test_blood_donation.py)
+=======================================================
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6
+collecting ... collected 1 item
+
+test_blood_donation.py::test_single_accepted_donor PASSED                [100%]
+
+============================== 1 passed in 0.04s ==============================
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+blood_donation_screening.py      45     24    47%   3, 10, 21-22, 25-28, 30-31, 36, 39, 41, 46-58
+-----------------------------------------------------------
+TOTAL                            45     24    47%
+
+=======================================================
+BASELINE BRANCH COVERAGE (Starter test_blood_donation.py)
+=======================================================
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Aarav\Documents\Studies\Sem5\Lab\SE\WEEK_06\Lab 6
+collecting ... collected 1 item
+
+test_blood_donation.py::test_single_accepted_donor PASSED                [100%]
+
+============================== 1 passed in 0.05s ==============================
+Name                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------
+blood_donation_screening.py      45     24     32      8    43%   3, 10, 21-22, 25-28, 30-31, 36, 39, 41, 46-58
+-------------------------------------------------------------------------
+TOTAL                            45     24     32      8    43%
